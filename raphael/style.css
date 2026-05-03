@@ -1,103 +1,190 @@
-/* Base Styles from your original style (2).css */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --navy: #0a1128;
-  --blue: #1a4fdb;
-  --blue-light: #e8effe;
-  --white: #ffffff;
-  --gray: #6b7280;
-  --border: #d1d9f5;
-  --text: #111827;
-  --transition: 0.25s cubic-bezier(.4,0,.2,1);
+  --b-pure: #000000;
+  --w-pure: #ffffff;
+  --b-text: #1a1a1a;
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
 }
 
-html { scroll-behavior: smooth; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--text);
-  background: var(--white);
-  line-height: 1.6;
+  background-color: var(--w-pure);
+  color: var(--b-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .logo { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
-
-/* ── NAV ── */
+/* --- NAVIGATION --- */
 nav {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 5%;
-  display: flex; align-items: center; justify-content: space-between;
-  height: 64px;
+  background-color: var(--b-pure);
+  color: var(--w-pure);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.logo { text-decoration: none; color: var(--navy); font-weight: 900; font-size: 1.5rem; }
+.logo-placeholder {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
 
-.nav-links { display: flex; gap: 1.5rem; list-style: none; }
-.nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--gray); text-decoration: none; transition: var(--transition); }
-.nav-links a:hover { color: var(--blue); }
-.nav-cta { background: var(--navy); color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 8px; }
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
 
-/* ── HAMBURGER ── */
-.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-.hamburger span { display: block; width: 25px; height: 3px; background: var(--navy); transition: 0.3s; }
+.nav-links a {
+  text-decoration: none;
+  color: var(--w-pure);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
 
-/* ── HERO ── */
-#home { display: flex; align-items: center; justify-content: space-evenly; padding: 100px 5%; gap: 3rem; }
-.hero-text { max-width: 560px; }
-.hero-text h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 1.5rem; }
-.hero-text span { color: var(--blue); }
-.hero-img { width: 350px; height: 350px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.nav-links a:hover { opacity: 0.6; }
 
-/* ── SECTIONS ── */
-section { padding: 80px 5%; border-top: 2px solid #000; }
-.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+/* --- HERO SECTION (THE TOPOGRAPHICAL LOOK) --- */
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 10%;
+  background-color: var(--w-pure);
+  position: relative;
+  /* Topographical Line Pattern */
+  background-image: 
+    repeating-radial-gradient(circle at 100% 100%, transparent, transparent 15px, rgba(0,0,0,0.05) 16px, transparent 17px),
+    repeating-radial-gradient(circle at 0% 0%, transparent, transparent 20px, rgba(0,0,0,0.05) 21px, transparent 22px);
+}
 
-/* ── SKILLS ── */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
-.skill-card { background: #fff; padding: 2.5rem; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border); }
-.skill-card h4 { margin-bottom: 1rem; color: var(--blue); }
-.skill-card ul { list-style: none; }
-.skill-card li::before { content: "• "; color: var(--blue); font-weight: bold; }
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
 
-/* ── INTERESTS ── */
-.interests-box { max-width: 900px; margin: 0 auto; text-align: center; font-size: 1.1rem; padding: 2rem; border-radius: 14px; background: var(--blue-light); }
+.hero-text h1 {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
 
-/* ── TEAM ── */
-#team { background: var(--white); }
-#team .section-title { color: #060d1f; }
-#team .section-title::after { background: var(--blue); }
-.team-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+.highlight {
+  background: var(--b-pure);
+  color: var(--w-pure);
+  padding: 0 10px;
+}
+
+.hero-img {
+  max-width: 400px;
+  filter: grayscale(100%) contrast(120%);
+  border: 1px solid var(--b-pure);
+  /* Piano displacement shadow */
+  box-shadow: 20px 20px 0px var(--b-pure);
+}
+
+/* --- SECTIONS --- */
+section { padding: 100px 10%; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  border-bottom: 2px solid var(--b-pure);
+  margin-bottom: 2.5rem;
+  display: inline-block;
+}
+
+/* ABOUT SECTION - DARK THEME */
+#about { background: var(--b-pure); color: var(--w-pure); }
+#about .section-title { border-color: var(--w-pure); }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  border: 2px solid var(--b-pure);
+  padding: 2rem;
+  transition: 0.4s;
+}
+
+.skill-card:hover {
+  background: var(--b-pure);
+  color: var(--w-pure);
+}
+
+.skill-card h4 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem; }
+
+/* TEAM GRID */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
 .team-item {
-  background: var(--white); border: 2px solid var(--border);
-  border-radius: var(--card-radius); padding: 1.2rem 1.8rem;
-  text-align: center; min-width: 160px;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  border: 1px dashed var(--b-pure);
+  padding: 1.5rem;
+  text-align: center;
 }
-.team-item:hover {
-  background: var(--blue-light); border-color: var(--blue-mid);
-  transform: translateY(-3px);
+
+.team-name a { text-decoration: none; color: var(--b-pure); font-weight: 600; }
+
+/* CONTACT */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, mlinmax(200px, 1fr));
+  gap: 20px;
 }
-.team-item .ci-val { font-size: 0.95rem; color: #060d1f; font-weight: 500; }
-.team-item a { color: var(--blue); text-decoration: none; }
-.team-item a:hover { text-decoration: underline; }
 
-/* ── CONTACT ── */
-.contact-grid { max-width: 500px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 14px; border: 1px solid var(--border); text-align: center; }
+.contact-item { border-left: 5px solid var(--b-pure); padding-left: 15px; }
+.ci-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+/* Estilo para sa lahat ng links sa Contact Section */
+.ci-val a {
+  text-decoration: none; /* Tinatanggal ang default na underline */
+  color: var(--b-pure);  /* Itim na kulay */
+  font-weight: 600;
+  transition: 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
 
-footer { text-align: center; padding: 2rem; background: var(--navy); color: #fff; }
+/* Pag tinapatan ng mouse (Hover effect) */
+.ci-val a:hover {
+  color: #555; /* Magiging light gray */
+  border-bottom: 1px solid #000; /* Lalabas ang underline */
+  opacity: 0.7;
+}
+footer {
+  background: var(--b-pure);
+  color: white;
+  text-align: center;
+  padding: 3rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
 
-/* ── MOBILE RESPONSIVE ── */
+/* MOBILE */
 @media (max-width: 768px) {
-  .hamburger { display: flex; }
-  .nav-links {
-    position: fixed; top: 64px; right: -100%; width: 100%; height: calc(100vh - 64px);
-    background: #fff; flex-direction: column; align-items: center; padding: 2rem; transition: 0.4s;
-  }
-  .nav-links.open { right: 0; }
-  #home { flex-direction: column-reverse; text-align: center; }
-  .hero-img { width: 250px; height: 250px; }
+  .hero-content { flex-direction: column; text-align: center; }
+  .hero-text h1 { font-size: 2.5rem; }
+  .hero-img { max-width: 280px; margin-top: 2rem; }
 }
