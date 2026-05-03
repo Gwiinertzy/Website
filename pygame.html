@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pygame Project – Coming Soon | Gwyneth Almirol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a1128;
+      --blue: #1a4fdb;
+      --blue-light: #e8effe;
+      --blue-mid: #3a6bef;
+      --white: #ffffff;
+      --gray: #6b7280;
+      --border: #d1d9f5;
+      --transition: 0.25s cubic-bezier(.4,0,.2,1);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    /* Animated grid background */
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(26,79,219,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,79,219,0.08) 1px, transparent 1px);
+      background-size: 48px 48px;
+      animation: gridMove 20s linear infinite;
+    }
+    @keyframes gridMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 48px 48px; }
+    }
+
+    /* Glowing orb */
+    .orb {
+      position: fixed;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,79,219,0.25) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 4s ease-in-out infinite;
+      z-index: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+      50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,17,40,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(209,217,245,0.12);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--white); text-decoration: none;
+    }
+    .back-btn {
+      font-size: 0.88rem; font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.4rem 1rem; border-radius: 8px;
+      transition: all var(--transition);
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .back-btn:hover {
+      color: #fff;
+      border-color: var(--blue-mid);
+      background: rgba(26,79,219,0.2);
+    }
+
+    /* MAIN */
+    main {
+      position: relative; z-index: 1;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 80px 5% 2rem;
+    }
+
+    /* Pixel snake animation */
+    .pixel-art {
+      display: grid;
+      grid-template-columns: repeat(10, 18px);
+      grid-template-rows: repeat(10, 18px);
+      gap: 3px;
+      margin-bottom: 2.5rem;
+      animation: floatUp 3s ease-in-out infinite;
+    }
+    @keyframes floatUp {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .pixel {
+      width: 18px; height: 18px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.04);
+    }
+    .pixel.on { background: var(--blue-mid); box-shadow: 0 0 6px rgba(58,107,239,0.6); }
+    .pixel.on2 { background: #7eb3ff; box-shadow: 0 0 6px rgba(126,179,255,0.5); }
+    .pixel.on3 { background: rgba(26,79,219,0.5); }
+
+    /* Badge */
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(26,79,219,0.2);
+      border: 1px solid rgba(26,79,219,0.4);
+      border-radius: 99px;
+      padding: 0.35rem 1rem;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #7eb3ff;
+      margin-bottom: 1.5rem;
+    }
+    .badge-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #7eb3ff;
+      animation: blink 1.4s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900; line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    h1 span { color: var(--blue-mid); }
+
+    .subtitle {
+      font-size: 1.05rem; color: rgba(255,255,255,0.55);
+      max-width: 480px; line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Progress bar */
+    .progress-wrap {
+      width: min(420px, 90vw);
+      margin-bottom: 2.5rem;
+    }
+    .progress-label {
+      display: flex; justify-content: space-between;
+      font-size: 0.78rem; color: rgba(255,255,255,0.4);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .progress-bar {
+      height: 6px; background: rgba(255,255,255,0.08);
+      border-radius: 99px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, var(--blue), #7eb3ff);
+      border-radius: 99px;
+      animation: fillBar 2.5s cubic-bezier(.4,0,.2,1) 0.5s forwards;
+    }
+    @keyframes fillBar {
+      to { width: 35%; }
+    }
+
+    /* Feature chips */
+    .features {
+      display: flex; flex-wrap: wrap; gap: 0.75rem;
+      justify-content: center; margin-bottom: 2.5rem;
+      max-width: 520px;
+    }
+    .chip {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.83rem; color: rgba(255,255,255,0.6);
+      transition: all var(--transition);
+    }
+    .chip:hover {
+      background: rgba(26,79,219,0.2);
+      border-color: var(--blue-mid);
+      color: #fff;
+    }
+
+    .back-home {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--blue);
+      color: #fff; text-decoration: none;
+      padding: 0.75rem 1.8rem; border-radius: 10px;
+      font-size: 0.95rem; font-weight: 600;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .back-home:hover {
+      background: var(--blue-mid);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      text-align: center; padding: 1rem;
+      font-size: 0.78rem; color: rgba(255,255,255,0.2);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="orb"></div>
+
+<nav>
+  <a href="index.html" class="logo">GA.</a>
+  <a href="team.html" class="back-btn">👥 Meet the Team</a>
+</nav>
+
+<main>
+  <!-- Pixel art snake/game icon -->
+  <div class="pixel-art" id="pixelGrid"></div>
+
+  <div class="badge">
+    <span class="badge-dot"></span>
+    In Development
+  </div>
+
+  <h1>Pygame Project<br><span>Coming Soon</span></h1>
+  <p class="subtitle">Something exciting is being built here. A Pygame-powered project is on its way — stay tuned!</p>
+
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span>Development Progress</span>
+      <span id="pct">0%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="fill"></div>
+    </div>
+  </div>
+
+  <div class="features">
+    <span class="chip">🎮 Game Mechanics</span>
+    <span class="chip">🐍 Python + Pygame</span>
+    <span class="chip">🎨 Custom Graphics</span>
+    <span class="chip">🔊 Sound Effects</span>
+    <span class="chip">🏆 Score System</span>
+  </div>
+
+  <a href="index.html" class="back-home">← Return to Portfolio</a>
+</main>
+
+<footer>&copy; 2025 Gwyneth Almirol. All rights reserved.</footer>
+
+<script>
+  // Draw a little snake/pixel art game icon
+  const grid = document.getElementById('pixelGrid');
+  // 10x10 grid — 1=blue, 2=light blue, 3=dim, 0=off
+  const pattern = [
+    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,2,2,2,2,0,0,0,0],
+    [0,0,2,0,0,2,0,0,0,0],
+    [0,0,2,2,2,2,1,1,0,0],
+    [0,0,0,0,0,0,0,1,0,0],
+    [0,0,3,3,3,3,3,1,0,0],
+    [0,0,3,0,0,0,0,0,0,0],
+    [0,0,3,3,0,0,0,0,0,0],
+    [0,0,0,3,0,0,0,0,0,0],
+    [0,0,0,3,3,3,0,0,0,0],
+  ];
+  const classMap = { 1: 'on', 2: 'on2', 3: 'on3' };
+  pattern.forEach(row => {
+    row.forEach(val => {
+      const div = document.createElement('div');
+      div.className = 'pixel' + (val ? ' ' + classMap[val] : '');
+      grid.appendChild(div);
+    });
+  });
+
+  // Animate the progress % counter
+  const pct = document.getElementById('pct');
+  let count = 0;
+  const target = 35;
+  const delay = 2500 / target;
+  setTimeout(() => {
+    const interval = setInterval(() => {
+      count++;
+      pct.textContent = count + '%';
+      if (count >= target) clearInterval(interval);
+    }, delay);
+  }, 500);
+</script>
+
+</body>
+</html>
