@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raphael C. Doria – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#home" class="logo">LOGO</a>
+  <span class="logo-placeholder">RAPHAEL DORIA</span>
 
   <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -19,52 +20,70 @@
 
   <ul class="nav-links" id="nav-links">
     <li><a href="../pygame.html"  onclick="closeMenu()">Pygame</a></li>
-    <li><a href="#home" onclick="closeMenu()">Landing Page</a></li>
-    <li><a href="#about" onclick="closeMenu()">About Me</a></li>
-    <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-    <li><a href="#interests" onclick="closeMenu()">Interests</a></li>
-    <li><a href="#team" onclick="closeMenu()">Our Team</a></li>
+    <li><a href="#home"        onclick="closeMenu()">Landing Page</a></li>
+    <li><a href="#about"       onclick="closeMenu()">About Me</a></li>
+    <li><a href="#skills"      onclick="closeMenu()">Skills</a></li>
+    <li><a href="#interests"   onclick="closeMenu()">Interests</a></li>
+    <li><a href="#team"        onclick="closeMenu()">Our Team</a></li>
     <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Contact Me</a></li>
   </ul>
 </nav>
 
+<!-- HERO -->
 <section id="home">
-  <div class="hero-text">
-    <h1>HI, I'M <span>RAPHAEL C. DORIA</span></h1>
-    <p>An 18-year-old, pursuing a Bachelor of Science in Information Technology, major in Multimedia Arts and Animation at Universidad de Dagupan (UDD).</p>
-    <p>I have a strong interest in graphic design, particularly in creating logos, posters, and slogans, and I am eager to continue improving and mastering these skills.</p>
-    <p>Beyond that, I enjoy expressing my creativity through drawing and singing. I also feel blessed to spend my time playing the piano, ukulele, and guitar for our church. Additionally, I am willing to learn the basics of coding and programming and to be a better multimedia artist.</p>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>HI, I'M <span class="highlight">RAPHAEL C. DORIA</span></h1>
+      <h2><i><b>Visionary Artist, Multimedia Student.</b></i></h2>
+      <h3><i>Creating harmony through graphics and music.</i></h3>
+      <p style="margin-top: 1.5rem; max-width: 500px;">An 18-year-old, pursuing a Bachelor of Science in Information Technology, major in Multimedia Arts and Animation at Universidad de Dagupan (UDD).</p>
+    </div>
+    <div class="hero-img-container">
+      <img class="hero-img" src="Main-Pic.png" alt="Raphael C. Doria Portrait">
+    </div>
   </div>
-  <img class="hero-img" src="Main-Pic.png" alt="Raphael C. Doria">
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-box">
+    <p>I have a strong interest in graphic design, particularly in creating logos, posters, and slogans, and I am eager to continue improving and mastering these skills. Beyond my academic life at UdD, I enjoy expressing my creativity through drawing and singing.</p>
+    <p>I feel blessed to spend my time playing the piano, ukulele, and guitar for our church. Additionally, I am passionate about learning the basics of coding and programming to become a more well-rounded multimedia artist.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
 <section id="skills">
-  <h2 class="section-title">MY SKILLS</h2>
+  <h2 class="section-title">My Skills</h2>
   <div class="skills-grid">
     <div class="skill-card">
-      <h4>TECHNICAL SKILLS</h4>
+      <h4>Technical Skills</h4>
       <ul>
         <li>Graphic Designing</li>
-        <li>Simple Photography and Photo Editing</li>
-        <li>Presentation Designing (PowerPoint)</li>
-        <li>Layout and Branding Designing</li>
+        <li>Simple Photography & Photo Editing</li>
+        <li>Presentation Design (PowerPoint)</li>
+        <li>Layout & Branding Design</li>
+        <li>Basic Coding (Python & Java)</li>
       </ul>
     </div>
     <div class="skill-card">
-      <h4>STRENGTHS</h4>
+      <h4>Strengths</h4>
       <ul>
         <li>Creative Thinking</li>
         <li>Problem-Solving</li>
         <li>Adept Learner</li>
+        <li>Collaborative</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- INTERESTS -->
 <section id="interests">
-  <h2 class="section-title">MY INTERESTS</h2>
+  <h2 class="section-title">My Interests</h2>
   <div class="interests-box">
-    I enjoy watching movies, especially action, comedy, and horror films. Aside from watching, I am also into online gaming. This is where I get to express my creative side, as it allows me to explore different strategies and unique ways of playing. I also love drawing and singing whenever I have the chance. For me, these are the best ways to express my emotions. Through art and music, I am able to show my true personality and share what I am feeling with others.
+    <p>I enjoy watching movies, especially action, comedy, and horror films. Aside from watching, I am also into online gaming like Mobile Legends: Bang Bang, where I express my creative side through strategy. For me, art and music are the best ways to express my emotions and share my true personality with others.</p>
   </div>
 </section>
 
@@ -72,26 +91,42 @@
 <section id="team">
   <h2 class="section-title">Meet the Whole Team</h2>
   <div class="team-grid">
-    <div class="team-item"><div class="ci-val"><a href="../gwyneth/index.html">Gwyneth Almirol</a></div></div>
-    <div class="team-item"><div class="ci-val"><a href="../Ivan/index.html">Ivan Landingin</a></div></div>
-    <div class="team-item"><div class="ci-val"><a href="../Marvin/index.html">Marvin Borja</a></div></div>
-    <div class="team-item"><div class="ci-val"><a href="../ervin/index.html">Ervin Ventura</a></div></div>
-    <div class="team-item"><div class="ci-val"><a href="../raphael/index.html">Raphael Doria</a></div></div>
+    <div class="team-item"><div class="team-name"><a href="../gwyneth/index.html">Gwyneth Almirol</a></div></div>
+    <div class="team-item"><div class="team-name"><a href="../Ivan/index.html">Ivan Landingin</a></div></div>
+    <div class="team-item"><div class="team-name"><a href="../Marvin/index.html">Marvin Borja</a></div></div>
+    <div class="team-item"><div class="team-name"><a href="../ervin/index.html">Ervin Ventura</a></div></div>
+    <div class="team-item"><div class="team-name"><a href="../raphael/index.html">Raphael Doria</a></div></div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-  <h2 class="section-title">CONTACT INFOS</h2>
+  <h2 class="section-title">Contact Information</h2>
   <div class="contact-grid">
     <div class="contact-item">
+      <div class="ci-label">Email Address</div>
       <div class="ci-val">
-        <ul style="list-style: none;">
-          <li>Mobile Number: 09277288915</li>
-          <li>Gmail: raphael.doria07@gmail.com</li>
-          <li>Facebook: Raphael Doria</li>
-          <li>Instagram: Raphael Doria</li>
-        </ul>
+        <a href="mailto:raphael.doria07@gmail.com">raphael.doria07@gmail.com</a>
       </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="ci-label">Facebook</div>
+      <div class="ci-val">
+        <a href="https://www.facebook.com/share/1BBYe5DJCC/" target="_blank">Raphael Doria</a>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="ci-label">Instagram</div>
+      <div class="ci-val">
+        <a href="https://www.instagram.com/rynyx_10?igsh=czVldDJkcG1pMmto" target="_blank">@rynyx_10</a>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="ci-label">Phone Number</div>
+      <div class="ci-val">09277288915</div>
     </div>
   </div>
 </section>
@@ -102,7 +137,7 @@
 
 <script>
   const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+  const navLinks  = document.getElementById('nav-links');
 
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
@@ -114,6 +149,5 @@
     hamburger.classList.remove('active');
   }
 </script>
-
 </body>
 </html>
