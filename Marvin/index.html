@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Marvin's Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVIGATION -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#creations">Creations</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <h1>Hello! I'm <span>Marvin</span></h1>
+  <h2 class="home-sub">Information Technology student & an artist.</h2>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div>
+    <img src="images/marvin.png" alt="Marvin Borja" class="about-photo">
+    <div>
+      <p>Hello! I'm Marvin Borja, and I'm 18 years old. I'm a student taking information technology, and I'm also an artist who loves traditional and digital art. While I'm still studying, I spend most of my time creating personal works that help me develop my style and creativity. I have always liked making art that shows how I feel and what I think. I'm always learning, growing, and trying to become a better version of me with every work I create.</p>
+      <p>I grew up in a very poor household. Despite all the difficulties my parents had to go through, this contributed to my character formation. Despite the challenges we encountered growing up, we were always there for each other. From that experience, I realized the true value of family.</p>
+      <p>There were certain things that I regret in retrospect, but every bad experience has taught me something valuable, and I'm extremely happy for all of the things I've got now.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>TECHNICAL SKILLS</h4>
+      <ul>
+        <li>Typing efficiently</li>
+        <li>File management</li>
+        <li>Using Gmail</li>
+        <li>Video editing</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>STRENGTHS</h4>
+      <ul>
+        <li>Patience</li>
+        <li>Time Management</li>
+        <li>Active listening</li>
+        <li>Problem solving</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIONS -->
+<section id="creations">
+  <h2>My Creations</h2>
+  <div class="cards-grid">
+    <div class="card" onclick="toggleGallery('drawings')">
+      <div class="card-thumb">
+        <img src="images/pencil.png" alt="Traditional drawings">
+      </div>
+      <div class="card-label">traditional</div>
+    </div>
+    <div class="card" onclick="toggleGallery('phonesketches')">
+      <div class="card-thumb">
+        <img src="images/phone.png" alt="Digital sketches">
+      </div>
+      <div class="card-label">digital</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <h2 class="section-title">Meet the Whole Team</h2>
+  <div class="team-grid">
+    <div class="team-item"><div class="ci-val"><a href="../gwyneth/index.html">Gwyneth Almirol</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../Ivan/index.html">Ivan Landingin</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../Marvin/index.html">Marvin Borja</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../ervin/index.html">Ervin Ventura</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../raphael/index.html">Raphael Doria</a></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div>
+    <div class="contact-item">
+      <div class="ci-label">Email</div>
+      <div class="ci-val"><a href="mailto:saenmarvinborja@gmail.com">saenmarvinborja@gmail.com</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Facebook</div>
+      <div class="ci-val"><a href="https://www.facebook.com/share/18Jakx4d3N/" target="_blank" rel="noopener noreferrer">facebook.com/Marvin</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Instagram</div>
+      <div class="ci-val"><a href="https://www.instagram.com/seyynnn_123?igsh=bHhjZ2d0c2lnaWI0" target="_blank" rel="noopener noreferrer">@seyynnn_123</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Phone</div>
+      <div><p>+63 994 930 0837</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2026 Marvin.</footer>
+
+<!-- GALLERIES -->
+<div class="gallery" id="gallery-drawings">
+  <div class="gallery-top">
+    <button class="back-btn" onclick="toggleGallery('drawings')">Back</button>
+  </div>
+  <div class="gallery-body">
+    <div class="sketches-grid">
+      <img src="images/drawing-1.jpg" alt="Drawing 1">
+      <img src="images/drawing-2.jpg" alt="Drawing 2">
+      <img src="images/drawing-3.webp" alt="Drawing 3">
+    </div>
+  </div>
+</div>
+
+<div class="gallery" id="gallery-phonesketches">
+  <div class="gallery-top">
+    <button class="back-btn" onclick="toggleGallery('phonesketches')">Back</button>
+  </div>
+  <div class="gallery-body">
+    <div class="sketches-grid">
+      <img src="images/phone-sketch-1.png" alt="Phone Sketch 1">
+      <img src="images/phone-sketch-2.png" alt="Phone Sketch 2">
+      <img src="images/phone-sketch-3.png" alt="Phone Sketch 3">
+      <img src="images/phone-sketch-4.png" alt="Phone Sketch 4">
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

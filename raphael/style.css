@@ -1,0 +1,103 @@
+/* Base Styles from your original style (2).css */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0a1128;
+  --blue: #1a4fdb;
+  --blue-light: #e8effe;
+  --white: #ffffff;
+  --gray: #6b7280;
+  --border: #d1d9f5;
+  --text: #111827;
+  --transition: 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .logo { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+
+.logo { text-decoration: none; color: var(--navy); font-weight: 900; font-size: 1.5rem; }
+
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.nav-links a:hover { color: var(--blue); }
+.nav-cta { background: var(--navy); color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 8px; }
+
+/* ── HAMBURGER ── */
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger span { display: block; width: 25px; height: 3px; background: var(--navy); transition: 0.3s; }
+
+/* ── HERO ── */
+#home { display: flex; align-items: center; justify-content: space-evenly; padding: 100px 5%; gap: 3rem; }
+.hero-text { max-width: 560px; }
+.hero-text h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 1.5rem; }
+.hero-text span { color: var(--blue); }
+.hero-img { width: 350px; height: 350px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+/* ── SECTIONS ── */
+section { padding: 80px 5%; border-top: 2px solid #000; }
+.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+
+/* ── SKILLS ── */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+.skill-card { background: #fff; padding: 2.5rem; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+.skill-card h4 { margin-bottom: 1rem; color: var(--blue); }
+.skill-card ul { list-style: none; }
+.skill-card li::before { content: "• "; color: var(--blue); font-weight: bold; }
+
+/* ── INTERESTS ── */
+.interests-box { max-width: 900px; margin: 0 auto; text-align: center; font-size: 1.1rem; padding: 2rem; border-radius: 14px; background: var(--blue-light); }
+
+/* ── TEAM ── */
+#team { background: var(--white); }
+#team .section-title { color: #060d1f; }
+#team .section-title::after { background: var(--blue); }
+.team-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+.team-item {
+  background: var(--white); border: 2px solid var(--border);
+  border-radius: var(--card-radius); padding: 1.2rem 1.8rem;
+  text-align: center; min-width: 160px;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+.team-item:hover {
+  background: var(--blue-light); border-color: var(--blue-mid);
+  transform: translateY(-3px);
+}
+.team-item .ci-val { font-size: 0.95rem; color: #060d1f; font-weight: 500; }
+.team-item a { color: var(--blue); text-decoration: none; }
+.team-item a:hover { text-decoration: underline; }
+
+/* ── CONTACT ── */
+.contact-grid { max-width: 500px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 14px; border: 1px solid var(--border); text-align: center; }
+
+footer { text-align: center; padding: 2rem; background: var(--navy); color: #fff; }
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    position: fixed; top: 64px; right: -100%; width: 100%; height: calc(100vh - 64px);
+    background: #fff; flex-direction: column; align-items: center; padding: 2rem; transition: 0.4s;
+  }
+  .nav-links.open { right: 0; }
+  #home { flex-direction: column-reverse; text-align: center; }
+  .hero-img { width: 250px; height: 250px; }
+}

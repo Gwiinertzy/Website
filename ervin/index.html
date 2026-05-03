@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ervin Gabriel Ventura – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="logo-placeholder"></span>
+
+  <!-- Hamburger button — visible on mobile only -->
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="pygame.html"  onclick="closeMenu()">Pygame</a></li>
+    <li><a href="#home"        onclick="closeMenu()">Homepage</a></li>
+    <li><a href="#about"       onclick="closeMenu()">About Me</a></li>
+    <li><a href="#skills"      onclick="closeMenu()">Skills</a></li>
+    <li><a href="#interests"   onclick="closeMenu()">Interests</a></li>
+    <li><a href="#team"        onclick="closeMenu()">Our Team</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Contact Me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Ervin Gabriel B. Ventura!</span></h1>
+  </div>
+  <img class="hero-img" src="Gab pic.jpg" alt="Ervin Gabriel Ventura" />
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-box">
+    <p><b>Hello!I’m Ervin Gabriel, an 18-year-old Information Technology student at Universidad de Dagupan (UDD).</b></p>
+    <p><b>I am currently learning graphic design and animation, where I continue to develop my creativity and technical skills. I am passionate about improving my skills and expanding my knowledge in multimedia and digital creativity.</b></p>
+    <p><b>I enjoy expressing my creativity through drawing. I am also learning to play musical instruments such as the guitar and piano, which help me relax and enhance my artistic expression. In my free time, I explore new creative ideas and continue practicing my skills to grow both personally and creatively.</b></p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>Skills</h4>
+      <ul>
+        <li><B>Graphic Design</B></li>
+        <li><B>Simple Photography</B></li>
+        <li><B>Guitar and Piano Playing</B></li>
+        <li><B>Basic Animation</B></li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>Strengths</h4>
+      <ul>
+        <li><B>Willingness to Learn</B></li>
+        <li><B>Adaptability</B></li>
+        <li><B>Technical Skills Development</B></li>
+        <li><B>Dedication & Self-Improvement</B></li>
+        <li><B>Passion for Multimedia</B></li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- INTERESTS -->
+<section id="interests">
+  <h2 class="section-title">My Interests</h2>
+  <div class="interests-box">
+    <b>I love spending my free time watching anime as well as horror and romance movies because they allow me to experience different emotions, stories, and artistic styles. Anime inspires my imagination and creativity through its unique visuals and storytelling, while horror movies give me excitement and suspense that keep me engaged. On the other hand, romance films help me appreciate meaningful relationships and emotional connections. Aside from watching movies and series, I also enjoy playing games, which help me relax, have fun, and improve my focus and problem-solving skills. These hobbies not only entertain me but also inspire my creativity and help me unwind after a busy day.</b>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section id="team">
+  <h2 class="section-title">Meet the Whole Team</h2>
+  <div class="team-grid">
+    <div class="team-item"><div class="ci-val"><a href="../gwyneth/index.html">Gwyneth Almirol</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../Ivan/index.html">Ivan Landingin</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../Marvin/index.html">Marvin Borja</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../ervin/index.html">Ervin Ventura</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../raphael/index.html">Raphael Doria</a></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact Information</h2>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="ci-label">Email Address</div>
+      <div class="ci-val"><a href="mailto:ervinventura@gmail.com">ervinventura@gmail.com</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Phone Number</div>
+      <div class="ci-val">09153968490</div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Facebook Account</div>
+      <div class="ci-val"><a href="https://www.facebook.com/share/1ETMoamSMr/" target="_blank">Ervin Ventura</a></div>
+    </div>
+  
+</section>
+
+<footer>
+  &copy; 2025 Ervin Gabriel Ventura. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+  }
+</script>
+</body>
+</html>

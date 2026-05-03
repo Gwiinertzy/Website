@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raphael C. Doria – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="#home" class="logo">LOGO</a>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../pygame.html"  onclick="closeMenu()">Pygame</a></li>
+    <li><a href="#home" onclick="closeMenu()">Landing Page</a></li>
+    <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+    <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+    <li><a href="#interests" onclick="closeMenu()">Interests</a></li>
+    <li><a href="#team" onclick="closeMenu()">Our Team</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Contact Me</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <div class="hero-text">
+    <h1>HI, I'M <span>RAPHAEL C. DORIA</span></h1>
+    <p>An 18-year-old, pursuing a Bachelor of Science in Information Technology, major in Multimedia Arts and Animation at Universidad de Dagupan (UDD).</p>
+    <p>I have a strong interest in graphic design, particularly in creating logos, posters, and slogans, and I am eager to continue improving and mastering these skills.</p>
+    <p>Beyond that, I enjoy expressing my creativity through drawing and singing. I also feel blessed to spend my time playing the piano, ukulele, and guitar for our church. Additionally, I am willing to learn the basics of coding and programming and to be a better multimedia artist.</p>
+  </div>
+  <img class="hero-img" src="Main-Pic.png" alt="Raphael C. Doria">
+</section>
+
+<section id="skills">
+  <h2 class="section-title">MY SKILLS</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>TECHNICAL SKILLS</h4>
+      <ul>
+        <li>Graphic Designing</li>
+        <li>Simple Photography and Photo Editing</li>
+        <li>Presentation Designing (PowerPoint)</li>
+        <li>Layout and Branding Designing</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h4>STRENGTHS</h4>
+      <ul>
+        <li>Creative Thinking</li>
+        <li>Problem-Solving</li>
+        <li>Adept Learner</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <h2 class="section-title">MY INTERESTS</h2>
+  <div class="interests-box">
+    I enjoy watching movies, especially action, comedy, and horror films. Aside from watching, I am also into online gaming. This is where I get to express my creative side, as it allows me to explore different strategies and unique ways of playing. I also love drawing and singing whenever I have the chance. For me, these are the best ways to express my emotions. Through art and music, I am able to show my true personality and share what I am feeling with others.
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <h2 class="section-title">Meet the Whole Team</h2>
+  <div class="team-grid">
+    <div class="team-item"><div class="ci-val"><a href="../gwyneth/index.html">Gwyneth Almirol</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../Ivan/index.html">Ivan Landingin</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../Marvin/index.html">Marvin Borja</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../ervin/index.html">Ervin Ventura</a></div></div>
+    <div class="team-item"><div class="ci-val"><a href="../raphael/index.html">Raphael Doria</a></div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">CONTACT INFOS</h2>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="ci-val">
+        <ul style="list-style: none;">
+          <li>Mobile Number: 09277288915</li>
+          <li>Gmail: raphael.doria07@gmail.com</li>
+          <li>Facebook: Raphael Doria</li>
+          <li>Instagram: Raphael Doria</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; Team Classroom Clash // WEB TECHNOLOGY AND DEVELOPMENT 1 // 12-ITEM-01 2025-2026
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+  }
+</script>
+
+</body>
+</html>
