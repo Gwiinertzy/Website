@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classroom Clash</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Oxanium:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">Classroom <span>Clash</span></div>
+  <ul id="nav-menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#howtoplay">How to Play</a></li>
+    <li><a href="#team">Team</a></li>
+  </ul>
+  <button class="menu-toggle" id="menu-btn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="inner">
+    <p class="hero-label">2D Pixel Action / Adventure</p>
+    <h1>⚔ SURVIVE THE CHAOS.<em> DEFEAT YOUR DEADLINES.</em></h1>
+    <h3 class="hero-desc">A 2D pixel action game where school turns into a battlefield. Fight through assignments, dodge deadlines, and defeat your instructors to graduate.</h3>
+    <div class="btn-row">
+      <a href="#howtoplay" class="btn btn-fill">Play Now</a>
+      <a href="#howtoplay" class="btn">How to Play</a>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <h3 class="sec-tag">About the Game</h3>
+    <h2>Overview</h2>
+    <h3 class="overview"><em>Classroom Clash</em> is a 2D pixel-style action game that transforms the struggles of student life into an exciting battle for survival. What starts as an ordinary school year quickly turns into chaos as assignments come to life and deadlines become enemies.</h3>
+
+    <h3 style="margin-top: 0;">The Story</h3>
+    <div class="story">
+      <h4>Earyl James and Glinda Lia are just ordinary students trying to survive their final school year, but this year feels different.</h4>
+      <h4>Assignments keep piling up. Deadlines feel like enemies. Something isn't right.</h4>
+      <h4>One day, the classroom changes. The blackboard begins to glow, papers start floating, and suddenly school becomes a battlefield.</h4>
+      <h4>Now they must complete their tasks, fight their instructors, and overcome every challenge, or risk never graduating.</h4>
+    </div>
+    <div class="tag-group">
+      <h3>Game Genre</h3>
+      <div class="tags">
+        <span class="tag warm">2D Pixel Art</span>
+        <span class="tag warm">Action</span>
+        <span class="tag warm">Adventure</span>
+      </div>
+    </div>
+    <div class="tag-group">
+      <h3>Objective</h3>
+      <div class="tags">
+        <span class="tag">Collect Tasks</span>
+        <span class="tag">Survive Obstacles</span>
+        <span class="tag">Defeat Bosses</span>
+        <span class="tag">Graduate</span>
+      </div>
+    </div>
+    <div class="tag-group">
+      <h3>What Makes It Unique</h3>
+      <div class="tags">
+        <span class="tag">Paper Sword Combat</span>
+        <span class="tag">Coffee Power-ups</span>
+        <span class="tag">School Boss Battles</span>
+        <span class="tag">Student Struggles as Gameplay</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- HOW TO PLAY -->
+<section id="howtoplay">
+  <div class="inner">
+    <p class="sec-tag">How to Play</p>
+    <h2>Game Guide</h2>
+
+    <div class="card-grid cols-4">
+      <div class="card">
+        <div class="num">01</div>
+        <h4>Launch</h4>
+        <p>Run <kbd>classroomClash.py</kbd> in your terminal</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h4>Start</h4>
+        <p>Click Play on the main screen</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h4>Choose</h4>
+        <p>Pick Earyl James or Glinda Lia</p>
+      </div>
+      <div class="card">
+        <div class="num">04</div>
+        <h4>Mission</h4>
+        <p>Read the briefing and click READY!</p>
+      </div>
+    </div>
+
+    <h3>Controls</h3>
+    <table>
+      <thead><tr><th>Key</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><kbd>Arrow Left</kbd> / <kbd>A</kbd></td><td>Move Left</td></tr>
+        <tr><td><kbd>Arrow Right</kbd> / <kbd>D</kbd></td><td>Move Right</td></tr>
+        <tr><td><kbd>W</kbd> / <kbd>Space</kbd></td><td>Jump</td></tr>
+        <tr><td><kbd>J</kbd> / <kbd>Z</kbd> / <kbd>F</kbd> / Click</td><td>Attack</td></tr>
+        <tr><td><kbd>K</kbd> / <kbd>Shift</kbd></td><td>Dash</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td>Pause</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Game Mechanics</h3>
+    <div class="card-grid cols-4">
+      <div class="card">
+        <h4>Health Bar</h4>
+        <p>Reach 0 and it's game over. Takes damage from obstacles, lost tasks, and boss hits.</p>
+      </div>
+      <div class="card">
+        <h4>Task Bar</h4>
+        <p>Collect 7 tasks to fill the bar and summon the boss. Losing tasks costs HP and progress.</p>
+      </div>
+      <div class="card">
+        <h4>Coffee Power-Up</h4>
+        <p>Grants faster movement, attacks, and stronger damage for 5 seconds.</p>
+      </div>
+      <div class="card">
+        <h4>Boss HP</h4>
+        <p>Deplete the boss's health to clear the level. Clear all three to graduate.</p>
+      </div>
+    </div>
+
+    <h3>Levels</h3>
+    <div class="card-grid cols-3">
+      <div class="card">
+        <div class="level-label">Level 01</div>
+        <div class="level-boss">Instructor</div>
+        <div class="level-loc">Classroom</div>
+      </div>
+      <div class="card">
+        <div class="level-label">Level 02</div>
+        <div class="level-boss">Research Adviser</div>
+        <div class="level-loc">Library</div>
+      </div>
+      <div class="card">
+        <div class="level-label">Level 03</div>
+        <div class="level-boss">The Dean</div>
+        <div class="level-loc">Office</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="inner">
+    <h3 class="sec-tag">Meet the Team</h3>
+    <h2>The Developers</h2>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-name">Gwyneth Almirol</div>
+        <div class="team-role">Lead Developer / Programmer</div>
+        <p class="team-desc">Led the development of the game by coding the entire system using Pygame, including gameplay mechanics, controls, and overall functionality.</p>
+        <a href="../gwyneth/index.html" class="port-link">View My Portfolio <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="team-card">
+        <div class="team-name">Ivan Landingin</div>
+        <div class="team-role">Sprite Artist / Support</div>
+        <p class="team-desc">Contributed to the creation of boss character sprites and provided support in organizing and ensuring all required project documents were complete.</p>
+        <a href="../Ivan/index.html" class="port-link">View My Portfolio <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="team-card">
+        <div class="team-name">Marvin Borja</div>
+        <div class="team-role">Web Developer / Sound & Background</div>
+        <p class="team-desc">Responsible for designing the game's background, integrating sound effects, and developing the group's promotional website.</p>
+        <a href="../Marvin/index.html" class="port-link">View My Portfolio <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="team-card">
+        <div class="team-name">Raphael Doria</div>
+        <div class="team-role">Sprite Artist / Animator</div>
+        <p class="team-desc">Worked on boss character sprites and handled the animation of cutscenes to enhance storytelling and visuals.</p>
+        <a href= "../raphael/index.html" class="port-link">View My Portfolio <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="team-card">
+        <div class="team-name">Ervin Ventura</div>
+        <div class="team-role">Character Designer</div>
+        <p class="team-desc">Designed and created the main playable characters, Earyl James and Glinda Lia.</p>
+        <a href="../ervin/index.html" class="port-link">View My Portfolio <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; Group infinITy // WEB TECHNOLOGY AND DEVELOPMENT 1 // 12-ITEM-01 2025-2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
