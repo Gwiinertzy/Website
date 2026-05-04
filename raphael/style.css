@@ -1,8 +1,8 @@
 :root {
-  --b-pure: #000000;
-  --w-pure: #ffffff;
-  --b-text: #1a1a1a;
-  --font-body: 'DM Sans', sans-serif;
+  --b-pure: black;
+  --w-pure: white;
+  --b-text: black;
+  --font-body: 'Times New Roman', sans-serif;
   --font-display: 'Cormorant Garamond', serif;
 }
 
@@ -57,7 +57,7 @@ nav {
 
 .nav-links a:hover { opacity: 0.6; }
 
-/* --- HERO SECTION (THE TOPOGRAPHICAL LOOK) --- */
+/* --- HERO SECTION --- */
 #home {
   min-height: 100vh;
   display: flex;
@@ -65,7 +65,6 @@ nav {
   padding: 100px 10%;
   background-color: var(--w-pure);
   position: relative;
-  /* Topographical Line Pattern */
   background-image: 
     repeating-radial-gradient(circle at 100% 100%, transparent, transparent 15px, rgba(0,0,0,0.05) 16px, transparent 17px),
     repeating-radial-gradient(circle at 0% 0%, transparent, transparent 20px, rgba(0,0,0,0.05) 21px, transparent 22px);
@@ -96,7 +95,6 @@ nav {
   max-width: 400px;
   filter: grayscale(100%) contrast(120%);
   border: 1px solid var(--b-pure);
-  /* Piano displacement shadow */
   box-shadow: 20px 20px 0px var(--b-pure);
 }
 
@@ -152,27 +150,14 @@ section { padding: 100px 10%; }
 /* CONTACT */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, mlinmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
 .contact-item { border-left: 5px solid var(--b-pure); padding-left: 15px; }
 .ci-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
-/* Estilo para sa lahat ng links sa Contact Section */
-.ci-val a {
-  text-decoration: none; /* Tinatanggal ang default na underline */
-  color: var(--b-pure);  /* Itim na kulay */
-  font-weight: 600;
-  transition: 0.3s ease;
-  border-bottom: 1px solid transparent;
-}
+.ci-val a { text-decoration: none; color: var(--b-pure); font-weight: 600; }
 
-/* Pag tinapatan ng mouse (Hover effect) */
-.ci-val a:hover {
-  color: #555; /* Magiging light gray */
-  border-bottom: 1px solid #000; /* Lalabas ang underline */
-  opacity: 0.7;
-}
 footer {
   background: var(--b-pure);
   color: white;
@@ -181,7 +166,68 @@ footer {
   font-size: 0.8rem;
   opacity: 0.8;
 }
+/* Gallery Section Styles */
+#gallery {
+  padding: 4rem 2rem;
+  background-color: white;
+}
 
+.gallery-container {
+  width: 100%;
+  overflow-x: auto; 
+  padding-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll {
+  display: flex;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery-item {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  background-color: black;
+  border-radius: 4px;
+}
+
+.caption {
+  margin-top: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer {
+  background-image: url('bakrawn.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white; 
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+}
 /* MOBILE */
 @media (max-width: 768px) {
   .hero-content { flex-direction: column; text-align: center; }
