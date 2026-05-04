@@ -227,10 +227,18 @@ footer::before {
   background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 07fe90cea1ea4d73e0b51e14184893f6417bd99f
 /* MOBILE */
 @media (max-width: 768px) {
   .hero-content { flex-direction: column; text-align: center; }
   .hero-text h1 { font-size: 2.5rem; }
   .hero-img { max-width: 280px; margin-top: 2rem; }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 07fe90cea1ea4d73e0b51e14184893f6417bd99f
