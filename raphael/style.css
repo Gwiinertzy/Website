@@ -227,7 +227,6 @@ footer::before {
   background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
-
 /* MOBILE */
 @media (max-width: 768px) {
   .hero-content { flex-direction: column; text-align: center; }
