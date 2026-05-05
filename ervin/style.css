@@ -403,45 +403,6 @@ section { padding: 80px 5%; }
   background: var(--blue); border-radius: 50%; flex-shrink: 0;
 }
 
-/* ── TEAM ── */
-#team { 
-
-  background: var(--sky-blue); 
-}
-
-#team .section-title { 
-  color: var(--navy); 
-}
-
-#team .section-title::after { 
-  background: var(--blue); 
-}
-
-.team-grid { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 1.5rem; 
-  justify-content: center; 
-}
-
-.team-item {
-
-  background: var(--white); 
-  border: 2px solid var(--border);
-  border-radius: var(--card-radius); 
-  padding: 1.2rem 1.8rem;
-  text-align: center; 
-  min-width: 160px;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
-}
-
-.team-item:hover {
-  /* Light blue effect pa rin kapag hino-hover ang card */
-  background: var(--blue-light); 
-  border-color: var(--blue-mid);
-  transform: translateY(-3px);
-}
-
 /* ── CONTACT ── */
 #contact { background: var(--navy); }
 #contact .section-title { color: #fff; }
@@ -527,9 +488,6 @@ footer {
 
   /* Exp grid single column */
   .exp-grid { grid-template-columns: 1fr; }
-
-  /* Team wraps nicely */
-  .team-item { min-width: 140px; }
 
   /* Contact cards full width on very small */
   .contact-item { min-width: 100%; }

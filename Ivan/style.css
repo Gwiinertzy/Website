@@ -128,7 +128,7 @@ nav {
 /*for left nav*/
 main,
 #home, #about, #skills, #interests,
-#performance, #team, #contact, footer {
+#performance, #contact, footer {
   margin-left: 220px;
 }
 
@@ -530,47 +530,6 @@ section {
   line-height: 1.4;
 }
 
-/*TEAM */
-#team {
-  background: var(--pure-white);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: flex-start;
-}
-
-.team-item {
-  background: var(--soft-warm-white);
-  border: 1px solid var(--light-tan);
-  border-radius: var(--card-radius);
-  padding: 2rem 3rem;
-  text-align: center;
-  min-width: 200px;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
-}
-
-.team-item:hover {
-  background: var(--warm-off-white);
-  border-color: var(--medium-brown);
-  transform: translateY(-3px);
-}
-
-.team-item .ci-val {
-  font-size: 1.1rem;
-  color: var(--near-black-brown);
-  font-weight: 500;
-}
-
-.team-item a { color: var(--dark-brown); text-decoration: none; }
-.team-item a:hover { text-decoration: underline; }
-
 /*  CONTACT */
 #contact {
   background: var(--deep-black-brown);
@@ -738,13 +697,11 @@ footer {
   section { padding: 60px 4%; }
 
   /* Reset min-height on mobile — let content breathe naturally */
-  #about, #skills, #team, #contact {
+  #about, #skills, #contact {
     min-height: auto;
   }
 
   .skills-grid { grid-template-columns: 1fr 1fr; }
-
-  .team-item { min-width: 130px; padding: 1.2rem 1.6rem; }
 
   .contact-grid { flex-direction: column; }
   .contact-item { min-width: unset; padding: 1.3rem 1.8rem; }

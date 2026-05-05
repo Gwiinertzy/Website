@@ -124,25 +124,6 @@ h2 {
 .card-thumb img { max-width: 70%; max-height: 70%; object-fit: contain; }
 .card-label { padding: 0.75rem; font-size: 1.15rem; font-weight: 500; text-align: center; }
 
-/* ── TEAM ── */
-#team { background: var(--white); }
-#team .section-title { color: #060d1f; }
-#team .section-title::after { background: var(--blue); }
-.team-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
-.team-item {
-  background: var(--white); border: 2px solid var(--border);
-  border-radius: var(--card-radius); padding: 1.2rem 1.8rem;
-  text-align: center; min-width: 160px;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
-}
-.team-item:hover {
-  background: var(--blue-light); border-color: var(--blue-mid);
-  transform: translateY(-3px);
-}
-.team-item .ci-val { font-size: 0.95rem; color: #060d1f; font-weight: 500; }
-.team-item a { color: var(--blue); text-decoration: none; }
-.team-item a:hover { text-decoration: underline; }
-
 /* CONTACT */
 #contact { background: var(--teal-bg); }
 .contact-item { padding: 1rem 0; border-bottom: 1px solid var(--teal-border); }

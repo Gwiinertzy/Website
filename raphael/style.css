@@ -132,21 +132,6 @@ section { padding: 100px 10%; }
 
 .skill-card h4 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem; }
 
-/* TEAM GRID */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-}
-
-.team-item {
-  border: 1px dashed var(--b-pure);
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.team-name a { text-decoration: none; color: var(--b-pure); font-weight: 600; }
-
 /* CONTACT */
 .contact-grid {
   display: grid;

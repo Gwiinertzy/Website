@@ -424,25 +424,6 @@ section {
   background: var(--blue); border-radius: 50%; flex-shrink: 0;
 }
 
-/* ── TEAM ── */
-#team { background: var(--white); }
-#team .section-title { color: #060d1f; }
-#team .section-title::after { background: var(--blue); }
-.team-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
-.team-item {
-  background: var(--white); border: 2px solid var(--border);
-  border-radius: var(--card-radius); padding: 1.2rem 1.8rem;
-  text-align: center; min-width: 160px;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
-}
-.team-item:hover {
-  background: var(--blue-light); border-color: var(--blue-mid);
-  transform: translateY(-3px);
-}
-.team-item .ci-val { font-size: 0.95rem; color: #060d1f; font-weight: 500; }
-.team-item a { color: var(--blue); text-decoration: none; }
-.team-item a:hover { text-decoration: underline; }
-
 /* ── CONTACT ── */
 #contact { background: var(--navy); }
 #contact .section-title { color: #fff; }
@@ -520,7 +501,6 @@ footer {
   .project-card { flex: 0 0 180px; }
   .project-card img { max-height: 160px; }
   .exp-grid { grid-template-columns: 1fr; }
-  .team-item { min-width: 140px; }
   .contact-item { min-width: 100%; }
 
   .tool-badge { min-width: 70px; padding: 0.75rem 0.9rem; }
