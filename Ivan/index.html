@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ivan Menard Landingin – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,9 +20,9 @@
   </button>
 
   <ul class="nav-links" id="nav-links">
-    <li><a href="../index.html"  onclick="closeMenu()">Pygame</a></li>
+    <li><a href="../pygame.html"  onclick="closeMenu()">Pygame</a></li>
     <li><a href="#home"        onclick="closeMenu()">Homepage</a></li>
-    <li><a href="#about"       onclick="closeMenu()">About Me</a></li>
+    <li><a href="#about"        onclick="closeMenu()">About Me</a></li>
     <li><a href="#skills"      onclick="closeMenu()">Skills</a></li>
     <li><a href="#interests"   onclick="closeMenu()">Interests</a></li>
     <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Contact Me</a></li>
@@ -32,30 +32,43 @@
 <!-- HERO -->
 <section id="home">
   <div class="hero-text">
-    <h1>Hi, I'm <span>Ivan Menard Landingin!</span></h1>
+    <h1>Hi, I'm <span><b>Ivan Menard Landingin!</b></span></h1>
     <h2><i><b>Create with vision, move with passion.</b></i></h2>
     <h3><i>Let every frame and every step tell a story.</i></h3>
   </div>
-  <img class="hero-img" src="images/IvanMainPic.png" alt="Ivan Menard Landingin" />
+  <img class="hero-img" src="IvanMainPic.png" alt="Ivan Menard Landingin" />
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <h2 class="section-title">About Me</h2>
-  <div class="about-box">
-    <p>an 18-year-old IT student majoring in Multimedia Arts and Animation, I spend my time
- balancing life between the computer screen and the dance floor. For me, tech is more than
- just hardware, it’s the tool I use to bring my imagination to life. I’m a mix of quiet focus and
- high energy, always shifting between creating and performing.<p>
-    <p>When I’m not studying, I’m either drawing characters from scratch or dancing with the 
-Steeds Dance Company. I love being creative, whether I’m behind a desk with a pencil or 
-moving on stage. Whether I’m perfecting a sketch or mastering a new dance routine, I’m 
-driven by the same goal: to create something that moves people. I’m excited to see how
- my technical skills in IT and my creative heart in the arts will come together to tell new 
-stories..</p>
+
+  <div class="about-row">
+    <div class="about-box">
+      <p>an 18-year-old IT student majoring in Multimedia Arts and Animation, I spend my time
+      balancing life between the computer screen and the dance floor. For me, tech is more than
+      just hardware, it's the tool I use to bring my imagination to life. I'm a mix of quiet focus and
+      high energy, always shifting between creating and performing.</p>
+    </div>
+    <div class="about-img-wrap">
+      <img src="Ivan2ndPic.jpg" alt="About Ivan 1" />
+    </div>
+  </div>
+
+  <div class="about-row reverse">
+    <div class="about-img-wrap">
+      <img src="Ivan3rdPic.png" alt="About Ivan 2" />
+    </div>
+    <div class="about-box">
+      <p>When I'm not studying, I'm either drawing characters from scratch or dancing with the 
+      Steeds Dance Company. I love being creative, whether I'm behind a desk with a pencil or 
+      moving on stage. Whether I'm perfecting a sketch or mastering a new dance routine, I'm 
+      driven by the same goal: to create something that moves people. I'm excited to see how
+      my technical skills in IT and my creative heart in the arts will come together to tell new 
+      stories..</p>
+    </div>
+  </div>
 </section>
-
-
 
 <!-- SKILLS -->
 <section id="skills">
@@ -79,13 +92,35 @@ stories..</p>
       </ul>
     </div>
   </div>
-  <div style="text-align:left; margin-top:2.5rem;">
-    <p style="font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--pure-white); margin-bottom:1rem; font-weight:600;">Tools &amp; Software Mastery</p>
+
+  <div style="text-align:center; margin-top:2.5rem;">
+    <p style="font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--pure-white); margin-bottom:1.2rem; font-weight:600;">Tools &amp; Software Mastery</p>
     <div class="tools-row">
-      <span class="tool-badge">Canva</span>
-      <span class="tool-badge">CapCut</span>
-      <span class="tool-badge">Word</span>
-      <span class="tool-badge">PowerPoint</span>
+
+      <!-- Canva -->
+      <div class="tool-badge">
+        <img src="CANVA LOGO.jpg" />
+        Canva
+      </div>
+
+      <!-- CapCut -->
+      <div class="tool-badge">
+        <img src="CAPCUT LOGO.jpg" />
+        CapCut
+      </div>
+
+      <!-- Microsoft Word -->
+      <div class="tool-badge">
+        <img src="WORD LOGO.webp" />
+        Word
+      </div>
+
+      <!-- Microsoft PowerPoint -->
+      <div class="tool-badge">
+        <img src="PPT LOGO.webp" />
+        PowerPoint
+      </div>
+
     </div>
   </div>
 </section>
@@ -96,24 +131,23 @@ stories..</p>
   <div class="interests-box">
    My interests include dancing and drawing, as both allow me to express my creativity and emotions. I also enjoy watching anime, which entertains me while inspiring my imagination through unique stories and artistic styles. In my free time, I like exploring new techniques and ideas to improve my skills in these hobbies.
   </div>
-  
 
   <div class="performance-category">
-    <h2>My Performances & Some of my Drawings
-    </h2>
+    <h2>My Performances & Some of my Artworks</h2>
     <div class="scroll-track">
-      <div class="project-card"><img src="images/englishfestperformance.jpg" alt=""/><div class="card-label">English Fest Intermission</div></div>
-      <div class="project-card"><img src="images/christmaslightingperformance.jpg" alt=""/><div class="card-label">Christmas Lighting Opening Prod</div></div>
-      <div class="project-card"><img src="images/intramsperformance.jpg" alt=""/><div class="card-label">Intrams Intermission</div></div>
-      <div class="project-card"><img src="images/binibiniintermissionperformance.jpg" alt=""/><div class="card-label">Binibining UdD Intermission</div></div>
-      <div class="project-card"><img src="images/binibiniperformance.jpg" alt=""/><div class="card-label">Binibining UdD Opening Prod</div></div>
-      <div class="project-card"><img src="images/hiyasperformance.jpg" alt=""/><div class="card-label">Hiyas ng UdD Opening Prod</div></div>
-      <div class="project-card"><img src="images/hiyasopeningprodperformance.jpg" alt=""/><div class="card-label">Hiyas ng UdD Opening Salvo</div></div>
-      <div class="project-card"><img src="images/uddannivperformance.jpg" alt=""/><div class="card-label">UdD University Anniversary Intermission</div></div>
-      <div class="project-card"><img src="images/drawing1.jpg" alt=""/><div class="card-label"></div></div>
-      <div class="project-card"><img src="images/drawing2.jpg" alt=""/><div class="card-label"></div></div>
-      <div class="project-card"><img src="images/drawing3.jpg" alt=""/><div class="card-label"></div></div>
-      <div class="project-card"><img src="images/drawing4.jpg" alt=""/><div class="card-label"></div></div>
+      <div class="performance-card"><img src="englishfestperformance.jpg" alt=""/><div class="card-label">English Fest Intermission</div></div>
+      <div class="performance-card"><img src="christmaslightingperformance.jpg" alt=""/><div class="card-label">Christmas Lighting Opening Prod</div></div>
+      <div class="performance-card"><img src="intramsperformance.jpg" alt=""/><div class="card-label">Intrams Intermission</div></div>
+      <div class="performance-card"><img src="binibiniintermissionperformance.jpg" alt=""/><div class="card-label">Binibining UdD Intermission</div></div>
+      <div class="performance-card"><img src="binibiniperformance.jpg" alt=""/><div class="card-label">Binibining UdD Opening Prod</div></div>
+      <div class="performance-card"><img src="hiyasperformance.jpg" alt=""/><div class="card-label">Hiyas ng UdD Opening Prod</div></div>
+      <div class="performance-card"><img src="hiyasopeningprodperformance.jpg" alt=""/><div class="card-label">Hiyas ng UdD Opening Salvo</div></div>
+      <div class="performance-card"><img src="uddannivperformance.jpg" alt=""/><div class="card-label">UdD University Anniversary Intermission</div></div>
+      <div class="performance-card"><img src="art1.jpg" alt=""/><div class="card-label"></div></div>
+      <div class="performance-card"><img src="drawing1.jpg" alt=""/><div class="card-label"></div></div>
+      <div class="performance-card"><img src="drawing2.jpg" alt=""/><div class="card-label"></div></div>
+      <div class="performance-card"><img src="drawing3.jpg" alt=""/><div class="card-label"></div></div>
+      <div class="performance-card"><img src="drawing4.jpg" alt=""/><div class="card-label"></div></div>
     </div>
   </div>
 </section>
@@ -142,7 +176,7 @@ stories..</p>
 </section>
 
 <footer>
-  &copy; Group infinITy // WEB TECHNOLOGY AND DEVELOPMENT 1 // 12-ITEM-01 2025-2026
+  &copy; Team Classroom Clash // WEB TECHNOLOGY AND DEVELOPMENT 1 // 12-ITEM-01 2025-2026
 </footer>
 
 <script src="script.js"></script>
